@@ -1,0 +1,12 @@
+function steamrollArray(arr) {
+  let levelone = [].concat.apply([],arr);
+  let leveltwo = [].concat.apply([],levelone);
+  let levelthree = [].concat.apply([],leveltwo);
+  return levelthree;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
+steamrollArray([[["a"]], [["b"]]])
+steamrollArray([1, [], [3, [[4]]]])
+steamrollArray([1, {}, [3, [[4]]]])
+steamrollArray([1, [2], [3, [[4]]]]) 

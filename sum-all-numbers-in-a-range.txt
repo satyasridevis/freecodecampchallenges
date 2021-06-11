@@ -1,0 +1,19 @@
+function sumAll(arr) {
+  arr = new Float64Array(arr);
+  arr.sort();
+  //console.log(arr);
+  let n = arr[1];
+  //console.log(n);
+  
+  let sum =0;
+  for(let i=arr[0];i<=n;i++)
+  {
+    sum = sum + i;
+  }
+  return sum;
+  
+}
+
+sumAll([1, 4]);
+sumAll([5, 10]);
+sumAll([4, 1]);

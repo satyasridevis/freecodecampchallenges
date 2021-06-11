@@ -1,0 +1,25 @@
+function fearNotLetter(str) {
+  let alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  let slicealphabets,i;
+  for(i =0;i<alphabets.length;i++){
+  if(str[0] === alphabets[i]){
+       slicealphabets = alphabets.slice(alphabets.indexOf(str[0]))
+   
+
+  }
+}
+for(i =0;i<slicealphabets.length;i++)
+{
+  if(slicealphabets[i] !== str[i])
+  {
+    break;
+  }
+
+}
+return slicealphabets[i];
+}
+
+fearNotLetter("abce");
+fearNotLetter("stvwx")
+fearNotLetter("abcdefghijklmnopqrstuvwxyz")
+fearNotLetter("abcdefghjklmno") 

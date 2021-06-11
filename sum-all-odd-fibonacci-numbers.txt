@@ -1,0 +1,22 @@
+function sumFibs(num) {
+  let n1=0,n2 =1;
+  let nextnum;
+  let sum =0;
+  while(n2<=num)
+  {
+    if(n2%2 !== 0)
+    {
+      sum+=n2;
+    }
+    n2 += n1;
+    n1 = n2 - n1;
+  }
+
+  return sum;
+
+  
+
+}
+
+console.log(sumFibs(4));
+console.log(sumFibs(1000));

@@ -1,0 +1,18 @@
+function diffArray(arr1, arr2) {
+  var mergeArr = arr1.concat(arr2);
+  
+
+  var newArr = mergeArr.filter((element,num1,num2) =>{
+    num1 =arr1.indexOf(element);
+    num2 =arr2.indexOf(element);
+    
+    if((num1 === -1) || (num2 === -1))
+    return element;
+  }) 
+  return newArr;
+}
+
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
+diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])

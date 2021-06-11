@@ -1,0 +1,20 @@
+function destroyer(arr) {
+  console.log(arguments);
+  let i;let newArray = [];
+  let values = Object.values(arguments).slice(1)
+  console.log(values)
+  for(i=0;i<arr.length;i++)
+  {
+    let indexvalues = values.indexOf(arr[i]);
+    //console.log(indexvalues)
+    if(indexvalues === -1)
+    {
+      console.log(arr[i])
+       newArray.push(arr[i])
+      
+    }
+  }
+  return newArray;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);

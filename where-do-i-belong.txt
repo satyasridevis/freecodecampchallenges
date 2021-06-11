@@ -1,0 +1,14 @@
+function getIndexToIns(arr, num) {
+  arr.push(num);
+  let array = new Float64Array(arr);
+  array = array.sort();
+  let number = array.indexOf(num);
+  return number;
+}
+
+getIndexToIns([40, 60], 50);
+getIndexToIns([10, 20, 30, 40, 50], 35);
+getIndexToIns([10, 20, 30, 40, 50], 30);
+getIndexToIns([3, 10, 5], 3);
+getIndexToIns([5, 3, 20, 3], 5);
+getIndexToIns([], 1)

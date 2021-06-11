@@ -1,0 +1,13 @@
+function spinalCase(str) {
+
+  let regex = /[\s_]/g;
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  
+  let newstr = str.replace(regex,"-").toLowerCase();
+  return newstr;
+
+}
+
+console.log(spinalCase("thisIsSpinalTap"));
+console.log(spinalCase("AllThe-small Things"))
+console.log(spinalCase("The_Andy_Griffith_Show"))

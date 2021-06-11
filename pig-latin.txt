@@ -1,0 +1,36 @@
+function translatePigLatin(str) {
+let regexone = /[aeiou]/g;
+let regextwo = /[bcdfgjklmnpqstvxzhrwy]/g;
+let resultone= str.match(regexone);
+let resulttwo = str.match(regextwo);
+let newarr = [];
+let newword, newstring;
+//console.log(resultone)
+//console.log(resulttwo)
+
+
+for(let i=0;i<str.length;i++)
+{
+       if(str[i] == resulttwo[i])
+          {
+         newarr.push(str[i]);
+        newstring = newarr.join('')
+         newword = str.replace(newstring,"") + newstring + "ay";
+          }
+         else if(str[0] == resultone[i])
+             {
+                  newword = str + "way";
+             }
+ }
+ return newword;
+}
+
+
+
+translatePigLatin("california")
+translatePigLatin("algorithm")
+translatePigLatin("schwartz")
+translatePigLatin("rhythm")
+translatePigLatin("paragraphs")
+translatePigLatin("glove")
+translatePigLatin("eight")

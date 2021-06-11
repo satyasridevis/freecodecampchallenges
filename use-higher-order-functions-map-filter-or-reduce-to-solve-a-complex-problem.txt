@@ -1,0 +1,19 @@
+const squareList = arr => {
+  // Only change code below this line
+  
+  let filteredarray = arr.filter(element => 
+
+    Number.isInteger(element) && element > 0 )
+  console.log(filteredarray);
+
+ let squarearray = filteredarray.map(element => 
+  element * element);
+  return squarearray;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+const squaredIntegerstwo = squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]);
+console.log(squaredIntegerstwo);

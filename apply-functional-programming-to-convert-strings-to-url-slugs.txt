@@ -1,0 +1,17 @@
+// Only change code below this line
+function urlSlug(title) {
+ //let newtitle = title.toLowerCase().split(' ').join("-");
+ let newtitle = title
+ .toLowerCase()
+ .split(/\s+/)
+ .filter(substr => substr !== "")
+ .join('-');
+ return newtitle;
+ 
+
+}
+// Only change code above this line
+
+console.log(urlSlug("Winter Is Coming"))
+console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"))
+console.log(urlSlug(" Winter Is  Coming"))
