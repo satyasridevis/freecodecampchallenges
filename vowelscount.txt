@@ -1,0 +1,17 @@
+function getCount(str) {
+  let vowelsCount = 0;
+  str = str.split("");
+  let vowels = [a,e,i,o,u];
+  for(let i=0;i<str.length;i++)
+    {
+      let findvowels = str.indexOf(vowels[i])
+      if(findvowels !== -1)
+        {
+          vowelsCount++;
+        }
+    }
+  
+  // enter your majic here
+  
+  return vowelsCount;
+}
